@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Chili 個人頁面</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- 導覽列 -->
     <nav>
         <div></div>
         <div id="link">
@@ -22,19 +25,51 @@
             <a href=""><img src="./img/icon-youtube.png" alt="youtube"></a>
         </div>
     </nav>
+
+    <!-- 輪播圖 -->
     <div id="banner">
         <div class="banner1">
-            <h1>標題一</h1>
-            <h2>標題二</h2>
+            <h1>Hi 今日天氣晴</h1>
+            <h2>一隻小豬</h2>
         </div>
         <div class="banner2">
-            <h1>標題一</h1>
-            <h2>標題二</h2>
+            <h1>小時候 - 童話故事</h1>
+            <h2>三隻小豬</h2>
         </div>
         <div class="banner3">
-            <h1>標題一</h1>
-            <h2>標題二</h2>
+            <h1>偷偷看著你</h1>
+            <h2>一群小豬</h2>
         </div>
     </div>
+
+    <!-- 最新消息 -->
+    <section id="news">
+        <h1>最新消息</h1>
+        <div id="news-content">
+            <div class="news-card">
+                <img src="" alt="">
+                <h3>標題三</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto?</p>
+                <button>按鈕</button>
+            </div>
+            <div class="news-card">
+                <img src="" alt="">
+                <h3>標題三</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, error!</p>
+                <button>按鈕</button>
+            </div>
+            <div class="news-card">
+                <img src="" alt="">
+                <h3>標題三</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, pariatur?</p>
+                <button>按鈕</button>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

@@ -39,8 +39,8 @@ nav #social a {
 }
 
 nav #social a:hover {
-  -webkit-filter: invert(96%) sepia(99%) saturate(6170%) hue-rotate(174deg) brightness(104%) contrast(102%);
-          filter: invert(96%) sepia(99%) saturate(6170%) hue-rotate(174deg) brightness(104%) contrast(102%);
+  -webkit-filter: invert(94%) sepia(36%) saturate(772%) hue-rotate(290deg) brightness(86%) contrast(147%);
+          filter: invert(94%) sepia(36%) saturate(772%) hue-rotate(290deg) brightness(86%) contrast(147%);
 }
 
 nav #social img {
@@ -56,5 +56,94 @@ nav #social img {
 .logo:hover {
   -webkit-transform: scale(2);
           transform: scale(2);
+}
+
+#banner .slick-prev {
+  left: 50px;
+  z-index: 2;
+}
+
+#banner .slick-next {
+  right: 50px;
+  z-index: 2;
+}
+
+#banner .slick-dots {
+  bottom: 50px;
+  -webkit-filter: invert(97%) sepia(1%) saturate(915%) hue-rotate(197deg) brightness(110%) contrast(83%);
+          filter: invert(97%) sepia(1%) saturate(915%) hue-rotate(197deg) brightness(110%) contrast(83%);
+  z-index: 2;
+}
+
+#banner .banner1 {
+  background-image: url(./img/banner1.jpg);
+  height: 100vh;
+}
+
+#banner .banner1:focus {
+  outline: none;
+}
+
+#banner .banner1 h1 {
+  padding: 100px 0 20px;
+  text-align: center;
+  font-size: 50px;
+  color: #e9e9e9;
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+#banner .banner1 h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #e9e9e9;
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+#banner .banner2 {
+  background-image: url(./img/banner2.jpg);
+  height: 100vh;
+}
+
+#banner .banner2:focus {
+  outline: none;
+}
+
+#banner .banner2 h1 {
+  padding: 100px 0 20px;
+  text-align: center;
+  font-size: 50px;
+  color: #e9e9e9;
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+#banner .banner2 h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #e9e9e9;
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+#banner .banner3 {
+  background-image: url(./img/banner3.jpg);
+  height: 100vh;
+}
+
+#banner .banner3:focus {
+  outline: none;
+}
+
+#banner .banner3 h1 {
+  padding: 100px 0 20px;
+  text-align: center;
+  font-size: 50px;
+  color: #e9e9e9;
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+#banner .banner3 h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #e9e9e9;
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=style.css.map */
