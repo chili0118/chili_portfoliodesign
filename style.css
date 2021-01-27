@@ -12,10 +12,16 @@ nav {
   -ms-grid-columns: 15% auto 15%;
       grid-template-columns: 15% auto 15%;
   text-align: center;
-  background: #555;
+  background: #888;
   color: #e9e9e9;
   padding: 30px;
   color: #e9e9e9;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  opacity: .9;
+  z-index: 10;
 }
 
 nav #link a {
@@ -27,7 +33,7 @@ nav #link a {
 }
 
 nav #link a:hover {
-  color: #CCEEFF;
+  color: #fac0c0;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -85,6 +91,7 @@ nav #social img {
 }
 
 #banner .banner1 h1 {
+  margin-top: 10px;
   padding: 100px 0 20px;
   text-align: center;
   font-size: 50px;
@@ -109,6 +116,7 @@ nav #social img {
 }
 
 #banner .banner2 h1 {
+  margin-top: 10px;
   padding: 100px 0 20px;
   text-align: center;
   font-size: 50px;
@@ -133,6 +141,7 @@ nav #social img {
 }
 
 #banner .banner3 h1 {
+  margin-top: 10px;
   padding: 100px 0 20px;
   text-align: center;
   font-size: 50px;
@@ -145,5 +154,159 @@ nav #social img {
   font-size: 26px;
   color: #e9e9e9;
   text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+#news {
+  width: 1280px;
+  margin: 30px auto 0;
+}
+
+#news:focus {
+  outline: none;
+}
+
+#news #news-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+}
+
+#news .news-card {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#news img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#news h3 {
+  text-align: center;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+#news p {
+  line-height: 1.5;
+  font-size: 14px;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+#works {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+#works .works-card:focus {
+  outline: none;
+}
+
+#works img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+}
+
+#works h2 {
+  text-align: center;
+  padding: 15px;
+  color: #fac0c0;
+}
+
+form {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+form input {
+  width: 40%;
+  padding: 10px 5px;
+}
+
+form input::-webkit-input-placeholder {
+  color: #888;
+  font-size: 12px;
+}
+
+form input:-ms-input-placeholder {
+  color: #888;
+  font-size: 12px;
+}
+
+form input::-ms-input-placeholder {
+  color: #888;
+  font-size: 12px;
+}
+
+form input::placeholder {
+  color: #888;
+  font-size: 12px;
+}
+
+form input[name=user-email] {
+  float: right;
+}
+
+form textarea {
+  width: 100%;
+  height: 300px;
+  margin: 30px 0;
+}
+
+form textarea::-webkit-input-placeholder {
+  color: #888;
+  font-size: 12px;
+}
+
+form textarea:-ms-input-placeholder {
+  color: #888;
+  font-size: 12px;
+}
+
+form textarea::-ms-input-placeholder {
+  color: #888;
+  font-size: 12px;
+}
+
+form textarea::placeholder {
+  color: #888;
+  font-size: 12px;
+}
+
+.btn {
+  background: #fac0c0;
+  color: #fff;
+  padding: 12px 30px;
+  display: block;
+  margin: 15px auto 10px;
+  width: 80%;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #fac0c0;
+  border: 1px solid #fac0c0;
+}
+
+.title-big {
+  text-align: center;
+  padding: 10px 0 30px;
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
