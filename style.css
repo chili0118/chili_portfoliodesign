@@ -6,6 +6,29 @@
   font-family: 微軟正黑體;
 }
 
+#menu {
+  background-image: url(./img/menu.png);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #menu {
+    display: block;
+    margin: 0 15px 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #menu {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+  }
+}
+
 nav {
   display: -ms-grid;
   display: grid;
@@ -20,8 +43,28 @@ nav {
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   width: 100%;
-  opacity: .9;
+  opacity: 0.9;
   z-index: 10;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    -ms-grid-columns: 95% 0;
+        grid-template-columns: 95% 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    background-size: cover;
+    margin: 0 20px 0 auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav #link {
+    display: none;
+  }
 }
 
 nav #link a {
@@ -38,9 +81,15 @@ nav #link a:hover {
           transform: scale(1.2);
 }
 
+@media screen and (max-width: 1024px) {
+  nav #social {
+    display: none;
+  }
+}
+
 nav #social a {
-  -webkit-transform: .5s;
-          transform: .5s;
+  -webkit-transform: 0.5s;
+          transform: 0.5s;
   padding: 0 10px;
 }
 
@@ -54,8 +103,8 @@ nav #social img {
 }
 
 .logo {
-  font-family: 'Ubuntu', sans-serif;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 32px !important;
 }
 
@@ -86,6 +135,12 @@ nav #social img {
   height: 100vh;
 }
 
+@media screen and (max-width: 1024px) {
+  #banner .banner1 {
+    background-size: cover;
+  }
+}
+
 #banner .banner1:focus {
   outline: none;
 }
@@ -99,6 +154,19 @@ nav #social img {
   text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 1024px) {
+  #banner .banner1 h1 {
+    padding: 500px 0 50px 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #banner .banner1 h1 {
+    padding: 250px 0 50px 20px;
+    font-size: 36px;
+  }
+}
+
 #banner .banner1 h2 {
   text-align: center;
   font-size: 26px;
@@ -106,9 +174,24 @@ nav #social img {
   text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 767px) {
+  #banner .banner1 h2 {
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+}
+
 #banner .banner2 {
   background-image: url(./img/banner2.jpg);
   height: 100vh;
+}
+
+@media screen and (max-width: 1024px) {
+  #banner .banner2 {
+    background-size: cover;
+  }
 }
 
 #banner .banner2:focus {
@@ -124,6 +207,19 @@ nav #social img {
   text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 1024px) {
+  #banner .banner2 h1 {
+    padding: 500px 0 50px 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #banner .banner2 h1 {
+    padding: 250px 0 50px 20px;
+    font-size: 36px;
+  }
+}
+
 #banner .banner2 h2 {
   text-align: center;
   font-size: 26px;
@@ -131,9 +227,24 @@ nav #social img {
   text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 767px) {
+  #banner .banner2 h2 {
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+}
+
 #banner .banner3 {
   background-image: url(./img/banner3.jpg);
   height: 100vh;
+}
+
+@media screen and (max-width: 1024px) {
+  #banner .banner3 {
+    background-size: cover;
+  }
 }
 
 #banner .banner3:focus {
@@ -149,6 +260,19 @@ nav #social img {
   text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 1024px) {
+  #banner .banner3 h1 {
+    padding: 500px 0 50px 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #banner .banner3 h1 {
+    padding: 250px 0 50px 20px;
+    font-size: 36px;
+  }
+}
+
 #banner .banner3 h2 {
   text-align: center;
   font-size: 26px;
@@ -156,9 +280,25 @@ nav #social img {
   text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 767px) {
+  #banner .banner3 h2 {
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+}
+
 #news {
   width: 1280px;
   margin: 30px auto 0;
+}
+
+@media screen and (max-width: 1024px) {
+  #news {
+    width: 100%;
+    padding: 50px 20px;
+  }
 }
 
 #news:focus {
@@ -171,6 +311,14 @@ nav #social img {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  #news #news-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
 }
 
 #news .news-card {
@@ -191,6 +339,12 @@ nav #social img {
   margin: 20px 0;
 }
 
+@media screen and (max-width: 1024px) {
+  #news h3 {
+    font-size: 26px;
+  }
+}
+
 #news p {
   line-height: 1.5;
   font-size: 14px;
@@ -198,9 +352,21 @@ nav #social img {
   margin: 15px 0;
 }
 
+@media screen and (max-width: 1024px) {
+  #news p {
+    font-size: 20px;
+  }
+}
+
 #works {
   width: 1280px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  #works {
+    width: 100%;
+  }
 }
 
 #works .works-card:focus {
@@ -252,7 +418,7 @@ form input::placeholder {
   font-size: 12px;
 }
 
-form input[name=user-email] {
+form input[name="user-email"] {
   float: right;
 }
 
@@ -285,15 +451,15 @@ form textarea::placeholder {
 .btn {
   background: #fac0c0;
   color: #fff;
-  padding: 12px 30px;
+  padding: 15px 30px;
   display: block;
-  margin: 15px auto 10px;
+  margin: 15px auto 15px;
   width: 80%;
   font-size: 20px;
   border-radius: 10px;
   border: none;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .btn:hover {
@@ -307,6 +473,6 @@ form textarea::placeholder {
   padding: 10px 0 30px;
   font-size: 30px;
   font-weight: 900;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Work+Sans:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Work+Sans:wght@600&display=swap");
 
 $color-gray: #888;
 $color-white: #e9e9e9;
 $color-pink: rgb(250, 192, 192);
-$box-shadow: 0 5px 10px rgba(0,0,0, .3);
+$box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+$tablet: 1024px;
+$mobile: 767px;
 
 * {
     margin: 0;
@@ -11,7 +13,35 @@ $box-shadow: 0 5px 10px rgba(0,0,0, .3);
     font-family: 微軟正黑體;
 }
 
+#menu {
+    background-image: url(./img/menu.png);
+    width: 32px;
+    height: 32px;
+    // 顯示成手指頭
+    cursor: pointer;
+    display: none;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+        margin: 0 15px 0 auto;
+    }
+    @media screen and (max-width: $mobile) {
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+    }
+}
+
 nav {
+    @media screen and (max-width: $tablet) {
+        grid-template-columns: 95% 0;
+    }
+
+    @media screen and (max-width: $mobile) {
+        background-size: cover;
+        margin: 0 20px 0 auto;
+    }
+
     display: grid;
     grid-template-columns: 15% auto 15%;
     text-align: center;
@@ -22,27 +52,35 @@ nav {
     box-shadow: $box-shadow;
     position: fixed;
     width: 100%;
-    opacity: .9;
+    opacity: 0.9;
     z-index: 10;
 
-        #link {
-            a {
-                color: $color-white;
-                text-decoration: none;
-                padding: 0 30px;
-                display: inline-block;
-                font-size: 16px;
+    #link {
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
 
-                &:hover {
-                    color:$color-pink;
-                    transform: scale(1.2);
-                }
+        a {
+            color: $color-white;
+            text-decoration: none;
+            padding: 0 30px;
+            display: inline-block;
+            font-size: 16px;
+
+            &:hover {
+                color: $color-pink;
+                transform: scale(1.2);
             }
         }
-    
+    }
+
     #social {
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+
         a {
-            transform: .5s;
+            transform: 0.5s;
             padding: 0 10px;
 
             &:hover {
@@ -57,8 +95,8 @@ nav {
 }
 
 .logo {
-    font-family: 'Ubuntu', sans-serif;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Ubuntu", sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-size: 32px !important;
 
     &:hover {
@@ -80,127 +118,162 @@ nav {
         filter: invert(97%) sepia(1%) saturate(915%) hue-rotate(197deg) brightness(110%) contrast(83%);
         z-index: 2;
     }
+
     @for $i from 1 through 3 {
         .banner#{$i} {
             background-image: url(./img/banner#{$i}.jpg);
             height: 100vh;
-    
+            // 調整位置
+            // background-position: -10px -50px;
+
+            @media screen and (max-width: $tablet) {
+                background-size: cover;
+            }
+
             &:focus {
                 outline: none;
             }
 
             h1 {
+                @media screen and (max-width: $tablet) {
+                    padding: 500px 0 50px 20px;
+                }
+                @media screen and (max-width: $mobile) {
+                    padding: 250px 0 50px 20px;
+                    font-size: 36px;
+                }
                 margin-top: 10px;
                 padding: 100px 0 20px;
                 text-align: center;
                 font-size: 50px;
                 color: $color-white;
-                text-shadow: 0 5px 8px rgba(0,0,0,0.2);
+                text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
             }
-    
+
             h2 {
+                @media screen and (max-width: $mobile) {
+                    font-size: 20px;
+                    width: 60%;
+                    margin: 0 auto;
+                    line-height: 1.5;
+                }
                 text-align: center;
                 font-size: 26px;
                 color: $color-white;
-                text-shadow: 0 5px 8px rgba(0,0,0,0.2);
+                text-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
             }
         }
     }
-
 }
 
 #news {
     width: 1280px;
     margin: 30px auto 0;
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+        padding: 50px 20px;
+    }
 
     &:focus {
         outline: none;
     }
 
-        #news-content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 25px;
+    #news-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+        @media screen and (max-width: $mobile) {
+            grid-template-columns: 1fr;
+            grid-gap: 40px;
         }
+    }
 
-        .news-card {
-            box-shadow: $box-shadow;
+    .news-card {
+        box-shadow: $box-shadow;
+    }
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    h3 {
+        text-align: center;
+        padding: 10px;
+        margin: 20px 0;
+        @media screen and (max-width: $tablet) {
+            font-size: 26px;
         }
+    }
 
-        img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
+    p {
+        line-height: 1.5;
+        font-size: 14px;
+        padding: 10px;
+        margin: 15px 0;
+        @media screen and (max-width: $tablet) {
+            font-size: 20px;
         }
-
-        h3 {
-            text-align: center;
-            padding: 10px;
-            margin: 20px 0;
-        }
-
-        p {
-            line-height: 1.5;
-            font-size: 14px;
-            padding: 10px;
-            margin: 15px 0;
-        }
-
+    }
 }
 
 #works {
     width: 1280px;
     margin: 0 auto;
+    @media screen and (max-width: $tablet){
+        width: 100%;
+    }
 
-        .works-card {
-            &:focus {
-                outline: none;
-            }
+    .works-card {
+        &:focus {
+            outline: none;
         }
+    }
 
-        img {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto;
-        }
+    img {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
 
-        h2 {
-            text-align: center;
-            padding: 15px;
-            color: $color-pink;
-        }
+    h2 {
+        text-align: center;
+        padding: 15px;
+        color: $color-pink;
+    }
 }
 
 form {
     width: 1280px;
     margin: 0 auto;
 
-        input {
-            width: 40%;
-            padding: 10px 5px;
+    input {
+        width: 40%;
+        padding: 10px 5px;
 
-            &::placeholder {
-                color: $color-gray;
-                font-size: 12px;
-            }
+        &::placeholder {
+            color: $color-gray;
+            font-size: 12px;
         }
+    }
 
-        input[name=user-email] {
-            float: right;
+    input[name="user-email"] {
+        float: right;
+    }
+
+    textarea {
+        width: 100%;
+        height: 300px;
+        margin: 30px 0;
+
+        &::placeholder {
+            color: $color-gray;
+            font-size: 12px;
         }
-
-        textarea {
-            width: 100%;
-            height: 300px;
-            margin: 30px 0;
-
-            &::placeholder {
-                color: $color-gray;
-                font-size: 12px;
-            }
-        }
+    }
 }
 
 // 統一樣式
@@ -208,18 +281,18 @@ form {
 .btn {
     background: rgb(250, 192, 192);
     color: #fff;
-    padding: 12px 30px;
+    padding: 15px 30px;
     display: block;
-    margin: 15px auto 10px;
+    margin: 15px auto 15px;
     width: 80%;
     font-size: 20px;
     border-radius: 10px;
     border: none;
-    transition: .5s;
+    transition: 0.5s;
 
     &:hover {
         background: #fff;
-        color:  rgb(250, 192, 192);
+        color: rgb(250, 192, 192);
         border: 1px solid rgb(250, 192, 192);
     }
 }
@@ -229,6 +302,5 @@ form {
     padding: 10px 0 30px;
     font-size: 30px;
     font-weight: 900;
-    margin-top: 20px;
+    margin-top: 30px;
 }
-
